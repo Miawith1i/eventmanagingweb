@@ -69,7 +69,7 @@ const Login = ({ onSwitchToRegister, onChangePassword }) => {
                                 />
                             </div>
                             <div className='button-click' style={{ marginBottom: '0px' }}>
-                                <button type="submit" className="btn btn-primary">Đăng Nhập</button>
+                                <button type="submit" className="btn beebut">Đăng Nhập</button>
                             </div>
                             <small className="d-block text-center" onClick={onChangePassword} style={{ cursor: 'pointer', color: 'blue', padding: '0px', margin: '0px' }}>Quên mật khẩu?</small>
                         </form>

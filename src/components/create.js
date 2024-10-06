@@ -70,7 +70,7 @@ const Create = ({ Create }) => {
                     display: "flex", margin: "20px", marginTop: "50px", fontWeight: "bold", borderBottom: "3px solid #f9a603",
                     paddingBottom: "10px", justifyContent: 'center', marginBottom: '40px'
                 }} className='d-flex justify-content-center mt-4'>Tạo sự kiện mới</h2>
-                <div style={{ marginTop: "10px", display: 'flex', maxWidth: '700px', border: "1px solid #aaa", borderRadius: "5px" }} className='formal'>
+                <div style={{ marginTop: "10px", display: 'flex', maxWidth: '700px', border: "1px solid black", borderRadius: "5px" }} className='formal'>
                     <form onSubmit={handleSubmit} >
                         <label style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', justifyContent: 'space-between' }}>Tên sự kiện
                             <input style={{ borderRadius: "7px", border: '1px solid', padding: "3px 10px", width: "350px" }}
@@ -132,7 +132,7 @@ const Create = ({ Create }) => {
                             />
                         </label>
                         <div className='form-inline justify-content-center'>
-                            <button style={{ width: "150px", marginInline: "30px" }} className='nav-link-ap btn-good' type="submit">Hoàn tất</button>
+                            <button style={{ width: "150px", marginInline: "30px" }} className='nav-link-ap beebut' type="submit">Hoàn tất</button>
                         </div>
                     </form>
                 </div>

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Noti = () => {
     const notifications = [
-        { id: 1, title: 'Tạo sự kiện thành công', message: 'Bạn đã tạo thành công Sự kiện 1' },
-        { id: 2, title: 'Tạo sự kiện thành công', message: 'Bạn đã tạo thành công Sự kiện 2' },
-        { id: 3, title: 'Huỷ sự kiện thành công', message: 'Bạn đã huỷ thành công Sự kiện 3' },
-        { id: 4, title: 'Thay đổi về sự kiện bạn tham gia', message: 'Sự kiện 4 đã có những cập nhật mới' },
-        { id: 5, title: 'Thay đổi về sự kiện bạn tham gia', message: 'Sự kiện 5 đã bị huỷ' },
+        { id: 1, title: 'Thay đổi về sự kiện bạn tham gia', message: 'Sự kiện 4 đã có những cập nhật mới' },
+        { id: 2, title: 'Thông báo 2', message: 'Đây là nội dung thông báo 2' },
+        { id: 3, title: 'Thông báo 3', message: 'Đây là nội dung thông báo 3' },
+        { id: 4, title: 'Thông báo 4', message: 'Đây là nội dung thông báo 4' },
+        { id: 5, title: 'Thông báo 5', message: 'Đây là nội dung thông báo 5' },
     ];
 
     return (
@@ -52,10 +52,10 @@ const Noti = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         {notifications.map((notification) => (
                             <div key={notification.id} style={{
-                                border: '1px solid #ddd',
+                                border: '1px solid black',
                                 borderRadius: '5px',
                                 padding: '15px',
-                                backgroundColor: '#f9f9f9'
+                                backgroundColor: '#ffff93'
                             }}>
                                 <h4>{notification.title}</h4>
                                 <p>{notification.message}</p>

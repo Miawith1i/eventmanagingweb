@@ -67,6 +67,11 @@ input {
     padding-bottom: 10px;
 }
 
+.card {
+    border: 1px solid black;
+    background-color: #ffff93;
+}
+
 .event-card img {
     width: 100%;
     /* Chiều rộng 100% của thẻ cha */
@@ -99,21 +104,18 @@ input {
     color: #aaa;
 }
 
-.btn-good:hover {
-    background-color: #167347;
+.beebut {
+    background-color: #ffff93;
+    border: 1px solid black;
+    color: black;
+    border-radius: 30px;
+    padding: 10px 20px
 }
 
-.btn-good {
-    background-color: #188754;
-    border: none;
-}
-
-.btn-bad:hover {
-    background-color: rgb(183, 1, 1);
-}
-
-.btn-bad {
-    border: none;
+.beebut:hover {
+    background-color: #ebebbf;
+    border: 2px solid black;
+    color: black;
 }
 
 /*

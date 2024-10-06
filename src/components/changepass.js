@@ -61,7 +61,7 @@ const ChangePassword = () => {
                                     />
                                 </div>
                                 <div className='button-click' style={{ marginBottom: '0px' }}>
-                                    <button type="submit" className="btn btn-primary">Tiếp theo</button>
+                                    <button type="submit" className="btn beebut">Tiếp theo</button>
                                 </div>
                             </form>
                         )}
@@ -95,7 +95,7 @@ const ChangePassword = () => {
                                     />
                                 </div>
                                 <div className='button-click' style={{ marginBottom: '0px' }}>
-                                    <button type="submit" className="btn btn-primary">Hoàn tất</button>
+                                    <button type="submit" className="btn beebut">Hoàn tất</button>
                                 </div>
                             </form>
                         )}

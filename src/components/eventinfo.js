@@ -164,7 +164,7 @@ const Eventinfo = () => {
                         <p style={{ marginLeft: '40px' }}>{event.des}</p>
                     </div>
                     <div className='d-flex justify-content-center'>
-                        <button onClick={handleJoin} className="btn btn-primary">
+                        <button onClick={handleJoin} className="btn beebut">
                             {isJoined ? 'Huỷ Tham Gia' : 'Tham Gia'}
                         </button>
                     </div>
@@ -188,7 +188,7 @@ const Eventinfo = () => {
                                 className="form-control mt-2"
                             />
                             <div >
-                                <button style={{ borderRadius: '20px', padding: '7px 20px', marginLeft: '40px' }} type="submit" className="btn btn-success mt-2">Gửi</button>
+                                <button style={{ borderRadius: '20px', padding: '7px 20px', marginLeft: '40px' }} type="submit" className="btn beebut mt-2">Gửi</button>
                             </div>
                         </form>
                     </div>

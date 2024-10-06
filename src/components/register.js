@@ -132,7 +132,7 @@ const Register = ({ onSwitchToLogin }) => {
                                 />
                             </div>
                             <div className='button-click'>
-                                <button type="submit" className="btn btn-primary" >Đăng Ký</button>
+                                <button type="submit" className="btn beebut" >Đăng Ký</button>
                             </div>
                         </form>
                         <small className="d-block text-center" style={{ padding: '20px' }}>

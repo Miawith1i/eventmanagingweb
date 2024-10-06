@@ -111,13 +111,13 @@ const UserProfile = () => {
                     <div>
                         {isEditing ? (
                             <>
-                                <button style={{ borderRadius: "20px" }} className="btn btn-success m-4 px-4" onClick={handleEdit}>Hoàn tất</button>
+                                <button className="btn m-4 px-4 beebut" onClick={handleEdit}>Hoàn tất</button>
                                 <button style={{ borderRadius: "20px" }} className="btn btn-secondary m-4 px-4" onClick={handleCancel}>Huỷ</button>
                             </>
                         ) : (
                             <>
                                 <div className='form-inline'>
-                                    <button className="btn btn-primary m-4" onClick={() => setIsEditing(true)}>Chỉnh sửa</button>
+                                    <button className="btn m-4 beebut" onClick={() => setIsEditing(true)}>Chỉnh sửa</button>
                                     <button style={{ borderRadius: "20px" }} className="btn btn-danger m-4 px-4" onClick={() => alert('Đã xóa tài khoản!')}>Xoá</button>
                                 </div>
                             </>
