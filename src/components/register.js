@@ -4,8 +4,15 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './logreg.css';
 
-let sampleUsers = []; // Mảng để lưu thông tin người dùng
-
+const sampleUsers = [
+    {
+        email: 'admin@gmail.com',
+        name: 'Admin',
+        password: '123456',
+        des: 'Quản trị viên',
+        image: null,
+    },
+];
 
 const Register = ({ onSwitchToLogin }) => {
     const navigate = useNavigate();
@@ -28,7 +35,7 @@ const Register = ({ onSwitchToLogin }) => {
     const handleFileChange = (event) => {
         setInputs(prevInputs => ({
             ...prevInputs,
-            avatar: event.target.files[0],
+            image: event.target.files[0],
         }));
     };
 

@@ -105,7 +105,7 @@ const Create = ({ Create }) => {
                                 name="topic"
                                 value={inputs.topic || ""}
                                 onChange={handleChange}
-                                required
+
                             >
                                 <option value="" disabled selected>Chọn lĩnh vực</option>
                                 <option value="giải trí">Giải Trí</option>
