@@ -197,25 +197,35 @@ const Home = () => {
                                     <img src={event.image} className="card-img-top" alt={event.title} />
                                     <div className="card-body">
                                         <Link to={`/eventinfo/${event.id}`} style={{ textDecoration: 'none', color: 'black' }}>
-                                            <h5 style={{ fontWeight: "bold" }} className="card-title">{event.title}</h5>
+                                            <h5 style={{ fontWeight: "bold", margin: '5px' }} className="card-title"><u>{event.title}</u></h5>
                                         </Link>
                                         <span style={{
                                             position: 'absolute',
                                             top: '10px',
-                                            right: '0px',
-                                            backgroundColor: 'black',
-                                            color: 'white',
+                                            right: '10px',
+                                            backgroundColor: '#ffffff',
+                                            color: 'black',
                                             border: '1px solid black',
-                                            borderRadius: '0px',
-                                            padding: '5px 10px',
+                                            borderRadius: '10px',
+                                            padding: '5px 7px',
                                             fontSize: '0.9em',
                                             zIndex: 1 // Đảm bảo tag hiển thị trên ảnh
-                                        }}>
-                                            {event.topic}
+                                        }}><i>
+                                                {event.topic}
+                                            </i>
                                         </span>
-                                        <p className="card-text">Địa Điểm: {event.location}</p>
-                                        <p className="card-text">Thời Gian: {event.date}</p>
-                                        <p className="card-text">Host: {event.host}</p>
+                                        <div style={{ display: 'flex', marginTop: '15px' }}>
+                                            <img src='location.svg' alt='Địa Điểm' style={{ height: '20px', width: '20px', marginInline: '10px' }} />
+                                            <p className="card-text" style={{ fontSize: '14px' }}>Địa Điểm: {event.location}</p>
+                                        </div>
+                                        <div style={{ display: 'flex' }}>
+                                            <img src='clock.svg' alt='Địa Điểm' style={{ height: '20px', width: '20px', marginInline: '10px' }} />
+                                            <p className="card-text" style={{ fontSize: '14px' }}>Thời Gian: {event.date}</p>
+                                        </div>
+                                        <div style={{ display: 'flex', marginBottom: '15px' }}>
+                                            <img src='host.svg' alt='Địa Điểm' style={{ height: '20px', width: '20px', marginInline: '10px' }} />
+                                            <p className="card-text" style={{ fontSize: '14px' }}>Host: {event.host}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
