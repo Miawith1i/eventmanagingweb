@@ -17,6 +17,11 @@ const UserProfile = () => {
             alert('Tên và mô tả không được để trống!');
             return;
         } else {
+            const userExists = users.some(user => user.email === tempInfo.email && user.email !== userInfo.email);
+            if (userExists) {
+                alert('Email đã tồn tại. Vui lòng sử dụng email khác!');
+                return;
+            }
             if (newImage) {
                 tempInfo.image = newImage;
             }
@@ -103,8 +108,18 @@ const UserProfile = () => {
                     )}
                     <div style={{ marginTop: "200px", marginLeft: "30px" }} className="mt-4">
                         <p>
-                            <strong>Email: </strong>
-                            {userInfo.email}
+                            <strong>Email:</strong> {isEditing ? (
+                                <input
+                                    type="text"
+                                    className=" typeplace"
+                                    style={{ width: '300px', marginLeft: '0px' }}
+                                    value={tempInfo.email}
+                                    onChange={(e) => setTempInfo({ ...tempInfo, email: e.target.value })}
+                                    placeholder="Nhập email của bạn"
+                                />
+                            ) : (
+                                userInfo.email
+                            )}
                         </p>
                     </div>
                     <div style={{ marginTop: "200px", marginLeft: "30px" }} className="mt-4">
