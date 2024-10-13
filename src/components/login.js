@@ -3,24 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import './logreg.css';
-
-let sampleUsers = [
-    { email: 'admin@gmail.com', password: '123' },
-    { email: 'user@example.com', password: 'password' },
-];
+import { users } from './sample';
 
 const Login = ({ onSwitchToRegister, onChangePassword }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        setErrorMessage('');//đặt lại thông báo lỗi
-
-        const user = sampleUsers.find(user => user.email === email && user.password === password);
-
+        const user = users.find(user => user.email === email && user.password === password);
         if (user) {
             console.log('Login success:', user);
             navigate('/home');
@@ -51,7 +43,7 @@ const Login = ({ onSwitchToRegister, onChangePassword }) => {
                                 <input
                                     type="email"
                                     className='typeplace'
-                                    style={{ marginInline: ' 30px', width: '450px' }}
+                                    style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
@@ -63,7 +55,7 @@ const Login = ({ onSwitchToRegister, onChangePassword }) => {
                                     type="password"
                                     className="form-control"
                                     value={password}
-                                    style={{ marginInline: ' 30px', width: '450px' }}
+                                    style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required
                                 />

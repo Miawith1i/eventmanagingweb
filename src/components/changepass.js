@@ -3,29 +3,36 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './home.css';
+import { users } from './sample';
 
 const ChangePassword = () => {
     const [email, setEmail] = useState('');
     const [verificationCode, setVerificationCode] = useState('');
     const [newPassword, setNewPassword] = useState('');
-    const [message, setMessage] = useState('');
 
     const navigate = useNavigate();
     const [step, setStep] = useState(1); // Trạng thái bước hiện tại
 
     const handleEmailSubmit = (e) => {
         e.preventDefault();
-        // Chuyển sang bước nhập mã xác nhận và mật khẩu mới
-        setStep(2);
+        const userreal = users.find(user => user.email === email)
+        if (userreal) {
+            setStep(2);
+        } else {
+            alert('Email không tồn tại, vui lòng kiểm tra lại!')
+        }
     };
 
     const handleChangePassword = (e) => {
         e.preventDefault();
-        // Hiển thị thông báo thành công
-        setMessage('Đổi mật khẩu thành công!');
-        setTimeout(() => {
-            navigate('/'); // Chuyển hướng về trang đăng nhập sau 2 giây
-        }, 2000);
+        const user = users.find(user => user.email === email);
+        if (verificationCode === user.vericode) {
+            alert('Mật khẩu đã được thay đổi thành công!');
+            navigate('/');
+        } else {
+            alert('Mã xác nhận không chính xác! Vui lòng thử lại.');
+            setStep(1);
+        }
     };
 
     return (
@@ -39,7 +46,6 @@ const ChangePassword = () => {
                 <div className="row justify-content-center" >
                     <div className="col-md-6 " style={{ padding: '0px 30px' }}>
                         <h1 className="text-center" style={{ paddingTop: '70px' }}>Thay đổi mật khẩu</h1>
-                        {message && <div className="alert alert-success">{message}</div>}
                         {step === 1 && (
                             <form onSubmit={handleEmailSubmit} style={{
                                 margin: 'auto', display: "flex",
@@ -56,7 +62,7 @@ const ChangePassword = () => {
                                         className="form-control"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        style={{ marginInline: ' 30px', width: '450px' }}
+                                        style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                         required
                                     />
                                 </div>
@@ -78,7 +84,7 @@ const ChangePassword = () => {
                                         type="text"
                                         className="form-control"
                                         value={verificationCode}
-                                        style={{ marginInline: ' 30px', width: '450px' }}
+                                        style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                         onChange={(e) => setVerificationCode(e.target.value)}
                                         required
                                     />
@@ -89,7 +95,7 @@ const ChangePassword = () => {
                                         type="password"
                                         className="form-control"
                                         value={newPassword}
-                                        style={{ marginInline: ' 30px', width: '450px' }}
+                                        style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                         onChange={(e) => setNewPassword(e.target.value)}
                                         required
                                     />

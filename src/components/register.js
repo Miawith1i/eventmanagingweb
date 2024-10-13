@@ -3,16 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './logreg.css';
+import { users } from './sample'
 
-const sampleUsers = [
-    {
-        email: 'admin@gmail.com',
-        name: 'Admin',
-        password: '123456',
-        des: 'Quản trị viên',
-        image: null,
-    },
-];
 
 const Register = ({ onSwitchToLogin }) => {
     const navigate = useNavigate();
@@ -42,25 +34,23 @@ const Register = ({ onSwitchToLogin }) => {
     const handleRegister = (event) => {
         event.preventDefault();
         // Kiểm tra xem email đã tồn tại chưa
-        const userExists = sampleUsers.some(user => user.email === inputs.email);
+        const userExists = users.some(user => user.email === inputs.email);
         if (userExists) {
-            alert('Email đã tồn tại. Vui lòng sử dụng email khác.');
+            alert('Email đã tồn tại. Vui lòng sử dụng email khác!');
             return;
         }
         // Lưu thông tin người dùng vào mảng
-        sampleUsers.push({
+        users.push({
             email: inputs.email,
             name: inputs.name,
             password: inputs.password,
             des: inputs.des,
             image: inputs.image,
         });
-
         console.log('Register success:', inputs);
-        alert('Đăng ký thành công');
+        alert('Đăng ký tài khoản mới thành công!');
         window.location.reload();
     };
-
 
     return (
         <div>
@@ -80,7 +70,7 @@ const Register = ({ onSwitchToLogin }) => {
                                     type="text"
                                     className="typeplace"
                                     name='name'
-                                    style={{ marginInline: ' 30px', width: '450px' }}
+                                    style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                     value={inputs.name}
                                     onChange={handleChange}
                                     required
@@ -92,7 +82,7 @@ const Register = ({ onSwitchToLogin }) => {
                                     type="email"
                                     className="typeplace"
                                     name='email'
-                                    style={{ marginInline: ' 30px', width: '450px' }}
+                                    style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                     value={inputs.email}
                                     onChange={handleChange}
                                     required
@@ -104,7 +94,7 @@ const Register = ({ onSwitchToLogin }) => {
                                     type="password"
                                     name='password'
                                     className="typeplace"
-                                    style={{ marginInline: ' 30px', width: '450px' }}
+                                    style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                     value={inputs.password}
                                     onChange={handleChange}
                                     required
@@ -115,7 +105,7 @@ const Register = ({ onSwitchToLogin }) => {
                                 <textarea
                                     name="des"
                                     className='typeplace'
-                                    style={{ marginInline: ' 30px', width: '450px' }}
+                                    style={{ marginInline: ' 30px', width: '450px', border: '1px solid black' }}
                                     value={inputs.description}
                                     onChange={handleChange}
                                 />

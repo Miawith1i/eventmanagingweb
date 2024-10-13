@@ -20,25 +20,14 @@ const Noti = () => {
                     <div className="logo mx-3">
                         <img src="eventure.png" alt="Logo" height="40" />
                     </div>
-                    <input className=" form-control mx-3"
-                        style={{ borderRadius: "20px", width: "400px" }}
-                        type="search"
-                        placeholder="Tìm kiếm sự kiện"
-                        aria-label="Search"
-                    />
-                    <button
-                        style={{ borderRadius: "20px", color: "white", backgroundColor: "black", fontFamily: "verdana", width: "70px", alignContent: "center", justifyContent: "center", paddingInline: "20px" }}
-                        className="btn btn-outline-success"
-                        type="submit">
-                        Tìm
-                    </button>
+
                     <nav>
                         <ul className="nav d-flex">
-                            <Link className="nav-link" to="/home"><img src="home.svg" alt="Trang chủ" /></Link>
-                            <Link className="nav-link" to="/account"><img src="user-circle.svg" alt="Tài khoản" /></Link>
-                            <Link className="nav-link" to="/myevent"><img src="star.svg" alt="Sự kiện" /></Link>
-                            <Link className="nav-link" to="/noti"><img src="bell.svg" alt="Thông Báo" /></Link>
-                            <Link className="nav-link" to="/create"><img src='plus.svg' alt="Tạo sự kiện" /></Link>
+                            <Link className="nav-link" to="/home" title='Trang chủ'><img src="home.svg" alt="Trang chủ" /></Link>
+                            <Link className="nav-link" to="/account" title='Tài khoản'><img src="user-circle.svg" alt="Tài khoản" /></Link>
+                            <Link className="nav-link" to="/myevent" title='Danh sách sự kiện'><img src="star.svg" alt="Sự kiện" /></Link>
+                            <Link className="nav-link" to="/noti" title='Thông báo'><img src="bell.svg" alt="Thông Báo" /></Link>
+                            <Link className="nav-link" to="/create" title='Tạo sự kiện'><img src='plus.svg' alt="Tạo sự kiện" /></Link>
                         </ul>
                     </nav>
                 </div>

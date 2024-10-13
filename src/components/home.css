@@ -54,7 +54,19 @@ input {
     background-color: black;
     border-radius: 20px;
     display: flex;
-    align-items: center;
+}
+
+.nav-link-ap:hover {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 10px 20px;
+    justify-content: center;
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    line-height: normal;
+    background-color: rgb(47, 47, 47);
+    border-radius: 20px;
+    display: flex;
 }
 
 .small-underline {
@@ -89,13 +101,14 @@ input {
 
 .typeplace {
     border-radius: 7px;
-    border: 1px solid #d9dddc;
+    border: 1px solid black;
     padding: 7px 15px;
+    width: 500px;
 }
 
 
 .form-control {
-    width: 270px;
+    width: 300px;
     margin-inline: 10px;
     align-items: center;
 }
@@ -109,12 +122,44 @@ input {
     border: 1px solid black;
     color: black;
     border-radius: 30px;
-    padding: 10px 20px
+    padding: 8px 18px
+}
+
+.dangerbut {
+    background-color: #dc3546;
+    border: 1px solid black;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 18px;
+}
+
+.dangerbut:hover {
+    background-color: #bb2d3b;
+    border: 1px solid black;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 18px
+}
+
+.okbut {
+    background-color: #188754;
+    border: 1px solid black;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 18px;
+}
+
+.okbut:hover {
+    background-color: #167347;
+    border: 1px solid black;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 18px
 }
 
 .beebut:hover {
     background-color: #ebebbf;
-    border: 2px solid black;
+    border: 1px solid black;
     color: black;
 }
 
