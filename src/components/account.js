@@ -12,9 +12,9 @@ const UserProfile = () => {
     const [newImage, setNewImage] = useState('');
 
     const handleEdit = () => {
-        const isValid = tempInfo.name.trim() !== "" && tempInfo.des.trim() !== "";
+        const isValid = tempInfo.name.trim() !== "" && tempInfo.des.trim() !== "" && tempInfo.password.trim() !== "";
         if (!isValid) {
-            alert('Tên và mô tả không được để trống!');
+            alert('Tên, mật khẩu và mô tả không được để trống!');
             return;
         } else {
             const userExists = users.some(user => user.email === tempInfo.email && user.email !== userInfo.email);
@@ -119,6 +119,22 @@ const UserProfile = () => {
                                 />
                             ) : (
                                 userInfo.email
+                            )}
+                        </p>
+                    </div>
+                    <div style={{ marginTop: "200px", marginLeft: "30px" }} className="mt-4">
+                        <p>
+                            <strong>Mật khẩu:</strong> {isEditing ? (
+                                <input
+                                    type="text"
+                                    className=" typeplace"
+                                    style={{ width: '300px', marginLeft: '0px' }}
+                                    value={tempInfo.password}
+                                    onChange={(e) => setTempInfo({ ...tempInfo, password: e.target.value })}
+                                    placeholder="Nhập mật khẩu của bạn"
+                                />
+                            ) : (
+                                userInfo.password
                             )}
                         </p>
                     </div>

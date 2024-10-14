@@ -54,21 +54,8 @@ const Home = () => {
             const matchesStartDate = startDate ? formattedEventDate >= startDate : true;
             const matchesEndDate = endDate ? formattedEventDate <= endDate : true;
 
-            console.log({
-                title: event.title,
-                matchesTitle,
-                location: event.location,
-                matchesLocation,
-                topic: event.topic,
-                matchesTopic,
-                formattedEventDate,
-                matchesStartDate,
-                matchesEndDate
-            }); // Log điều kiện lọc
-
             return matchesTitle && matchesLocation && matchesTopic && matchesStartDate && matchesEndDate;
         });
-        console.log("Kết quả tìm kiếm: ", results); // Log kết quả tìm kiếm
 
         setFilteredEvents(results);
         setCurrentPage(1); // Reset về trang 1 khi tìm kiếm

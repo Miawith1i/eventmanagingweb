@@ -43,6 +43,12 @@ const Eventinfo = () => {
         }
     };
     const handleEdit = () => {
+        const dayleft = Math.ceil((new Date(tempInfo.date) - new Date()) / (1000 * 60 * 60 * 24))
+        console.log("Còn lại", dayleft, "ngày")
+        if (dayleft <= 7) {
+            alert('Bạn không thể chỉnh sửa thông tin khi sự kiện sẽ diễn ra trong vòng 7 NGÀY tới!');
+            return;
+        }
         setTempInfo(event);
         setIsEditing(true);
     };
